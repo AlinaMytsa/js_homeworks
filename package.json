@@ -1,0 +1,27 @@
+{
+  "name": "js_homeworks",
+  "version": "1.0.0",
+  "description": "-",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlinaMytsa/js_homeworks.git#main"
+  },
+  "author": "Alina Mytsa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlinaMytsa/js_homeworks/issues"
+  },
+  "homepage": "https://github.com/AlinaMytsa/js_homeworks/tree/main#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "prettier": "3.3.3"
+  }
+}
