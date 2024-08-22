@@ -3,5 +3,8 @@ module.exports = {
   rules: {
     strict: 'off',
     'no-undef': 'off',
+    'no-plusplus': 'off',
+    'no-console': 'off',
+    'no-alert': 'off',
   },
 };
