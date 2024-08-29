@@ -6,5 +6,6 @@ module.exports = {
     'no-plusplus': 'off',
     'no-console': 'off',
     'no-alert': 'off',
+    'no-shadow': 'off',
   },
 };
