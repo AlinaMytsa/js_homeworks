@@ -7,5 +7,6 @@ module.exports = {
     'no-console': 'off',
     'no-alert': 'off',
     'no-shadow': 'off',
+    'no-continue': 'off',
   },
 };
