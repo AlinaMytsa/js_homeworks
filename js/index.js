@@ -14,8 +14,8 @@ const ladder = {
     return this.step;
   },
 };
-// ladder.up();
-// ladder.up();
-// ladder.down();
-// ladder.showStep();
+ladder.up();
+ladder.up();
+ladder.down();
+ladder.showStep();
 console.log(ladder.up().up().down().showStep());
