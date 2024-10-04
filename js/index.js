@@ -2,10 +2,12 @@
 
 const IMG_FOLDER = './images/';
 const IMG_EXT = '.jpg';
+
 const appendHTMLElement = (parentElement = null, elementToAppend = null) => {
   if (!parentElement || !elementToAppend) return;
   parentElement.append(elementToAppend);
 };
+
 const getRandomNumber = () => {
   const num = Math.floor(Math.random() * 10);
   if (num === 0) return 1;
@@ -19,5 +21,6 @@ const generateImg = (imgName) => {
   img.title = `${IMG_FOLDER}${imgName + IMG_EXT}`;
   return img;
 };
+
 const imageToAppend = generateImg(getRandomNumber());
 appendHTMLElement(document.body, imageToAppend);
