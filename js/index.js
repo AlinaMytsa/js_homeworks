@@ -1,14 +1,28 @@
 'use strict';
 
-const docBody = document.body;
-const table = () => {
-  for (let i = 1; i <= 100; i++) {
-    const row = document.createElement('tr');
-    const desc = document.createElement('td');
-    row.append(desc);
-    const description = document.createTextNode(`${i}`);
-    desc.append(description);
-    docBody.append(row);
-  }
+const appendHTMLElements = (parentEl = null, elementToAppend = null) => {
+  if (!parentEl || !elementToAppend) return;
+  parentEl.append(elementToAppend);
 };
-table();
+
+const generateTable = () => {
+  const tableSize = 10;
+  const table = document.createElement('table');
+  table.className = 'table';
+  const tbody = document.createElement('tbody');
+  table.append(tbody);
+
+  for (let i = 1; i <= tableSize; i++) {
+    const tr = document.createElement('tr');
+
+    for (let b = 1; b <= tableSize; b++) {
+      const td = document.createElement('td');
+      td.innerHTML = `${b}`;
+      tr.append(td);
+    }
+    tbody.append(tr);
+  }
+  return table;
+};
+
+appendHTMLElements(document.body, generateTable());
