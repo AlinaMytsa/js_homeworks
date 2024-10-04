@@ -13,12 +13,12 @@ const getRandomNumber = () => {
   return num;
 };
 
-const getRamdomImg = (imgName) => {
+const generateImg = (imgName) => {
   const img = document.createElement('img');
   img.src = `${IMG_FOLDER}${imgName + IMG_EXT}`;
   img.alt = `${IMG_FOLDER}${imgName + IMG_EXT}`;
   img.title = `${IMG_FOLDER}${imgName + IMG_EXT}`;
   return img;
 };
-const imageToAppend = getRamdomImg(getRandomNumber());
+const imageToAppend = generateImg(getRandomNumber());
 appendHTMLElement(document.body, imageToAppend);
