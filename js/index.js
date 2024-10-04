@@ -13,6 +13,7 @@ const getRandomNumber = () => {
   if (num === 0) return 1;
   return num;
 };
+
 const generateImg = (imgName) => {
   const img = document.createElement('img');
   img.src = `${IMG_FOLDER}${imgName + IMG_EXT}`;
@@ -20,5 +21,6 @@ const generateImg = (imgName) => {
   img.title = `${IMG_FOLDER}${imgName + IMG_EXT}`;
   return img;
 };
+
 const imageToAppend = generateImg(getRandomNumber());
 appendHTMLElement(document.body, imageToAppend);
