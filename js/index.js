@@ -2,7 +2,7 @@
 
 const sum = () => {
   let result = 0;
-  return function (num) {
+  return (num) => {
     result += num;
     return result;
   };
