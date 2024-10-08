@@ -5,18 +5,18 @@ const appendElement = (parentEl = null, elementToAppend = null) => {
   parentEl.append(elementToAppend);
 };
 
-const generateList = (array) => {
+const generateList = (listType, array) => {
+  if (!listType || typeof listType !== 'string') throw new Error('listType arg must be a list type');
   if (!array || !Array.isArray(array)) throw new Error('array arg must be an array');
 
-  const list = document.createElement('ul');
-  appendElement(document.body, list);
+  const list = document.createElement(listType);
 
   for (const item of array) {
     const listItem = document.createElement('li');
     appendElement(list, listItem);
 
     if (Array.isArray(item)) {
-      appendElement(listItem, generateList(item));
+      appendElement(listItem, generateList(listType, item));
     } else {
       listItem.innerHTML = item;
     }
@@ -24,4 +24,5 @@ const generateList = (array) => {
   }
   return list;
 };
-console.log(generateList([1, 2, 3, [4, 5, 6]]));
+const result = generateList('ol', [1, 2, 3, [4, 5, 6]]);
+appendElement(document.body, result);
