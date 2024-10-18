@@ -8,5 +8,6 @@ module.exports = {
     'no-alert': 'off',
     'no-shadow': 'off',
     'no-restricted-syntax': 'off',
+    'import/extensions': 'off',
   },
 };
